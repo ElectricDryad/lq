@@ -4,7 +4,7 @@
   "description": "Loaded questions generator",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/ElectricDryad/lq/issues"
   },
-  "homepage": "https://github.com/ElectricDryad/lq#readme"
+  "homepage": "https://github.com/ElectricDryad/lq#readme",
+  "dependencies": {
+    "foundation": "^4.2.1-1",
+    "lite-server": "^2.6.1"
+  }
 }

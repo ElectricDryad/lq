@@ -1,75 +1,76 @@
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Loaded Question Generator</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <script src="js/vendor/modernizr.js"></script>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Loaded Question Generator</title>
+	<link rel="stylesheet" href="css/foundation.css" />
+	<script src="js/vendor/modernizr.js"></script>
 	<script src="js/tabletop/src/tabletop.js"></script>
 	<script src="js/tabletop/src/backbone.tabletopSync.js"></script>
 	<script src="js/tabletop/Gruntfile.js"></script>
-	
-	<link rel="icon" 
-      type="image/png" 
-      href="/img/lqicon.png">
-  </head>
-  <body>
- 
-<div class="container">
 
-<div class="row">
-	  <div class="small-12 medium-12 large-12 columns">
-	  <div class="panel" style="margin-top:15px;">
-	  <div align="center">
-	  
-	  
-	  
- <p id="questionoutput"></p>
+	<link rel="icon" type="image/png" href="/img/lqicon.png">
+</head>
 
- <button onclick="init()">Random Question(s)</button></div>
+<body>
 
- 
-  <div class="row panel">
-	 <p>How many questions would you like?</p>
-	 <!-- <form><input type="text" id="inputnumber-old" value="1"></form> -->
-	 
-  <ul class="button-group round">
-    <li><a href="#" class="small button" onclick="set1()">1</a></li>
-    <li><a href="#" class="small button" onclick="set2()">2</a></li>
-    <li><a href="#" class="small button" onclick="set3()">3</a></li>
-	<li><a href="#" class="small button" onclick="set4()">4</a></li>
-  </ul>
-	 
-	 <div class="row">
-	 <div class="small-12 medium-8 large-6 columns">
-	 <div class="small-2 column">
-		<label for="sfwtoggle" class="inline right">NSFW</label>
-	</div>
-	<div class="small-4 medium-3 large-3 column">
-	 <div class="switch large round">
-  <input id="sfwtoggle" type="checkbox">
-  <label for="sfwtoggle"></label>
-</div> 
-</div>
-<div class="small-2 column">
-<label for="sfwtoggle" class="inline left">SFW</label>
-</div>
-<div class="small-5 column">
-</div>
-</div>
-</div>
+	<div class="container">
+
+		<div class="row">
+			<div class="small-12 medium-12 large-12 columns">
+				<div class="panel" style="margin-top:15px;">
+					<div align="center">
 
 
-		
-		
 
-	 
-<!--	 <input type="radio" id="sfwtoggle" checked name="sfw">SFW
+						<p id="questionoutput"></p>
+
+						<button onclick="init()">Random Question(s)</button>
+
+
+						<div class="row panel">
+							<p>How many questions would you like?</p>
+							<!-- <form><input type="text" id="inputnumber-old" value="1"></form> -->
+
+							<ul class="button-group round">
+								<li><a href="#" class="small button" onclick="set1()">1</a></li>
+								<li><a href="#" class="small button" onclick="set2()">2</a></li>
+								<li><a href="#" class="small button" onclick="set3()">3</a></li>
+								<li><a href="#" class="small button" onclick="set4()">4</a></li>
+							</ul>
+
+							<div class="row">
+								<div class="small-12 medium-8 large-6 columns" align="center">
+									<div class="small-2 column" align="center">
+										<label for="sfwtoggle" class="inline right">NSFW</label>
+									</div>
+									<div class="small-4 medium-3 large-3 column">
+										<div class="switch large round">
+											<input id="sfwtoggle" type="checkbox">
+											<label for="sfwtoggle"></label>
+										</div>
+									</div>
+									<div class="small-2 column">
+										<label for="sfwtoggle" class="inline left">SFW</label>
+									</div>
+
+									<div class="small-5 column">
+									</div>
+								</div>
+							</div>
+
+
+
+
+
+
+							<!--	 <input type="radio" id="sfwtoggle" checked name="sfw">SFW
 	 <input type="radio" id="nsfwtoggle" name="sfw">NSFW</form> -->
-	 
-	 
-	 
-	<!-- <p>Excluding these tags:</p>
+
+
+
+							<!-- <p>Excluding these tags:</p>
 	 <input type="checkbox" id="ex_none" checked="true"> None <br />
 	 <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
 	 <li><input type="checkbox" id="ex_sex"> Sex  </li>
@@ -83,144 +84,160 @@
 	 <li><input type="checkbox" id="ex_silly"> Silly  </li>
 	 <li><input type="checkbox" id="ex_misc"> Miscellaneous</li>
 	 </ul> -->
-	 </div>
- </div>
- </div>
-<p align="center">Hey, if you like this, <a href="http://paypal.me/KayleighLeBlanc">please help cover the costs to keep it up and running!</a>
+						</div>
+					</div>
+				</div>
+				<p align="center">Hey, if you like this, <a href="http://paypal.me/KayleighLeBlanc">please help cover
+						the
+						costs to keep it up and running!</a>
 
-<br /><br />Have a better question? <a href="https://docs.google.com/forms/d/1Hz6HafU3L67QbfUtmjSuqeAfiu6g1wC_TruRqqb2cz4/viewform">Add it to the collection</a>.
-<br />
-<br />Or choose from <a href="https://docs.google.com/spreadsheets/d/1X34jwbzZJJXmHAiOtYWxym2MTzOeXBjZkLAEj4cheM0/edit#gid=763210267">all the questions</a>.</p>
- </div>
-</div>
-</div>
- 
-  <script type="text/javascript">
+					<br /><br />Have a better question? <a
+						href="https://docs.google.com/forms/d/1Hz6HafU3L67QbfUtmjSuqeAfiu6g1wC_TruRqqb2cz4/viewform">Add
+						it
+						to the collection</a>.
+					<br />
+					<br />Or choose from <a
+						href="https://docs.google.com/spreadsheets/d/1X34jwbzZJJXmHAiOtYWxym2MTzOeXBjZkLAEj4cheM0/edit#gid=763210267">all
+						the questions</a>.
+				</p>
+			</div>
+		</div>
+	</div>
 
-  var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1X34jwbzZJJXmHAiOtYWxym2MTzOeXBjZkLAEj4cheM0/pubhtml';
+	<script type="text/javascript">
 
- function init() {
-    Tabletop.init( { key: public_spreadsheet_url,
-                     callback: showInfo,
-                     simpleSheet: true } )
-  }
+		var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1X34jwbzZJJXmHAiOtYWxym2MTzOeXBjZkLAEj4cheM0/pubhtml';
 
- function showInfo(data, tabletop) {
-    console.log(data);
-	console.log(inputnumber);
-	var totalquestions = data.length;
-	var x = 0;
-	// var inputnumber = document.getElementById("inputnumber").value;
-	/* if (inputnumber > totalquestions){
-		inputnumber = totalquestions;
-		} */
-	var question = "";
-	var rando = [];
-	do {
-	    console.log("Entering Do while loop");
-		rando[rando.length] = Math.floor((Math.random() * totalquestions) + 0);
-		console.log(rando + "----random number");
-		var lastrando = (rando.length - 1);
-		var position = 0;
-	
-	
-	
-	
-	/*	// Check if current question is a duplicate of any previous questions this query
-		do {
-			console.log("Entering dupe checker");
-			if (rando[lastrando] != rando[position]) {
-				console.log("Not a dupe");
-				position++;
+		function init() {
+			Tabletop.init({
+				key: public_spreadsheet_url,
+				callback: showInfo,
+				simpleSheet: true
+			})
+		}
+
+		function showInfo(data, tabletop) {
+			console.log(data);
+			console.log(inputnumber);
+			var totalquestions = data.length;
+			var x = 0;
+			// var inputnumber = document.getElementById("inputnumber").value;
+			/* if (inputnumber > totalquestions){
+				inputnumber = totalquestions;
+				} */
+			var question = "";
+			var rando = [];
+			let firstQ = 0;
+			do {
+				console.log("Entering Do while loop");
+				rando[rando.length] = Math.floor((Math.random() * totalquestions) + 0);
+				console.log(rando + "----random number");
+				// lastrando is the last index in the rando array - used for category duplicate checking
+				var lastrando = (rando.length - 1);
+				var position = 0;
+
+
+
+
+				/*	// Check if current question is a duplicate of any previous questions this query
+					do {
+						console.log("Entering dupe checker");
+						if (rando[lastrando] != rando[position]) {
+							console.log("Not a dupe");
+							position++;
+							}
+						else if (rando[lastrando] == rando[position]) {
+							console.log("DUPLICATE");
+							rando[lastrando] = Math.floor((Math.random() * totalquestions) + 0);
+							rando[lastrando] = Math.floor((Math.random() * totalquestions) + 0);
+							console.log(rando + "---- NEW random number **************************************");
+							position = 0;
+							}
+						if (data[rando].
+						}
+					while (position < lastrando); */
+
+
+				// Check if current question has at least one different tag than any previous questions
+				if (firstQ !== 0) {
+
+					do {
+						console.log("Entering tag checker");
+						console.log("Position entry:")
+						printRandoEntry(position, data, rando);
+						console.log("Lastrando entry:")
+						printRandoEntry(lastrando, data, rando);
+						debugger;
+						if (data[rando[lastrando]]['Tags [Sex]'] !== data[rando[position]]['Tags [Sex]']) {
+							//are Sex tags the same?
+
+							console.log("Sex tags don't match.");
+							position++;
+						}
+						else if (data[rando[lastrando]]['Tags [Work]'] !== data[rando[position]]['Tags [Work]']) {
+							//are Work tags the same?
+							console.log("Work tags don't match.");
+							position++;
+						}
+						else if (data[rando[lastrando]]['Tags [Pastimes]'] !== data[rando[position]]['Tags [Pastimes]']) {
+							//are Pastimes tags the same?
+							console.log("Pastimes tags don't match.");
+							position++;
+						}
+						else if (data[rando[lastrando]]['Tags [InnerLife]'] != data[rando[position]]['Tags [InnerLife]']) {
+							//are InnerLife tags the same?
+							console.log("InnerLife tags don't match.");
+							position++;
+						}
+						else if (data[rando[lastrando]]['Tags [Culture]'] != data[rando[position]]['Tags [Culture]']) {
+							//are Culture tags the same?
+							console.log("Culture tags don't match.");
+							position++;
+						}
+						else if (data[rando[lastrando]]['Tags [WhatIf]'] != data[rando[position]]['Tags [WhatIf]']) {
+							//are WhatIf tags the same?
+							console.log("WhatIf tags don't match.");
+							position++;
+						}
+						else if (data[rando[lastrando]]['Tags [Past]'] != data[rando[position]]['Tags [Past]']) {
+							//are Past tags the same?
+							console.log("Past tags don't match.");
+							position++;
+						}
+						else if (data[rando[lastrando]]['Tags [HopesDreams]'] != data[rando[position]]['Tags [HopesDreams]']) {
+							//are HopesDreams tags the same?
+							console.log("HopesDreams tags don't match.");
+							position++;
+						}
+						else if (data[rando[lastrando]]['Tags [Silly]'] != data[rando[position]]['Tags [Silly]']) {
+							//are Silly tags the same?
+							console.log("Silly tags don't match.");
+							position++;
+						}
+						else if (data[rando[lastrando]]['Tags [Misc]'] != data[rando[position]]['Tags [Misc]']) {
+							//are Misc tags the same?
+							console.log("Misc tags don't match.");
+							position++;
+						}
+						else if (data[rando[lastrando]]['Tags [Opinion]'] != data[rando[position]]['Tags [Opinion]']) {
+							//are Opinion tags the same?
+							console.log("Opinion tags don't match.");
+							position++;
+						}
+						//if the same, new random number
+						else {
+							console.log("All tags the same");
+							rando[lastrando] = Math.floor((Math.random() * totalquestions) + 0);
+							console.log(rando + "---- NEW random number **************************************");
+							position = 0;
+						}
+					}
+					while (position < lastrando);	//continues until checked against all previously chosen questions
 				}
-			else if (rando[lastrando] == rando[position]) {
-				console.log("DUPLICATE");
-				rando[lastrando] = Math.floor((Math.random() * totalquestions) + 0);
-				rando[lastrando] = Math.floor((Math.random() * totalquestions) + 0);
-				console.log(rando + "---- NEW random number **************************************");
-				position = 0;
-				}
-			if (data[rando].
-			}
-		while (position < lastrando); */
-		
-		
-		// Check if current question has at least one different tag than any previous questions
-		do {
-			console.log("Entering tag checker");
-			if (data[rando[lastrando]].Sex != data[rando[position]].Sex) {
-			//are Sex tags the same?
-				console.log("Sex tags don't match.");
-				position++;
-				}
-				  else if  (data[rando[lastrando]].Work != data[rando[position]].Work) {
-					//are Work tags the same?
-					console.log("Work tags don't match.");
-					position++;
-					}
-				  else if  (data[rando[lastrando]].Pastimes != data[rando[position]].Pastimes) {
-					//are Pastimes tags the same?
-					console.log("Pastimes tags don't match.");
-					position++;
-					}
-				  else if  (data[rando[lastrando]].InnerLife != data[rando[position]].InnerLife) {
-					//are InnerLife tags the same?
-					console.log("InnerLife tags don't match.");
-					position++;
-					}
-				  else if  (data[rando[lastrando]].Culture != data[rando[position]].Culture) {
-					//are Culture tags the same?
-					console.log("Culture tags don't match.");
-					position++;
-					}
-				  else if  (data[rando[lastrando]].Culture != data[rando[position]].Culture) {
-					//are Culture tags the same?
-					console.log("Culture tags don't match.");
-					position++;
-					}
-				  else if  (data[rando[lastrando]].WhatIf != data[rando[position]].WhatIf) {
-					//are WhatIf tags the same?
-					console.log("WhatIf tags don't match.");
-					position++;
-					}
-				  else if  (data[rando[lastrando]].Past != data[rando[position]].Past) {
-					//are Past tags the same?
-					console.log("Past tags don't match.");
-					position++;
-					}
-				  else if  (data[rando[lastrando]].HopesDreams != data[rando[position]].HopesDreams) {
-					//are HopesDreams tags the same?
-					console.log("HopesDreams tags don't match.");
-					position++;
-					}					
-				  else if  (data[rando[lastrando]].Silly != data[rando[position]].Silly) {
-					//are Silly tags the same?
-					console.log("Silly tags don't match.");
-					position++;
-					}
-				  else if  (data[rando[lastrando]].Misc != data[rando[position]].Misc) {
-					//are Misc tags the same?
-					console.log("Misc tags don't match.");
-					position++;
-					}
-				  else if  (data[rando[lastrando]].Opinion != data[rando[position]].Opinion) {
-					//are Opinion tags the same?
-					console.log("Opinion tags don't match.");
-					position++;
-					}
-			//if the same, new random number
-			else {
-				console.log("All tags the same");
-				rando[lastrando] = Math.floor((Math.random() * totalquestions) + 0);
-				console.log(rando + "---- NEW random number **************************************");
-				position = 0;
-				}
-			}
-		while (position < lastrando);	//continues until checked against all previously chosen questions
-		
-		//tags: Sex, Work, Pastimes, InnerLife, Culture, WhatIf, Past, HopesDreams, Silly, Misc, Opinion
-		
-				
+				firstQ++;
+				//tags: Sex, Work, Pastimes, InnerLife, Culture, WhatIf, Past, HopesDreams, Silly, Misc, Opinion
+
+
 				// Check if question is SFW before adding to question string, if SFW is selected
 				var NSFW = "";
 				var SFWtoggle = document.getElementById("sfwtoggle").checked;
@@ -229,49 +246,50 @@
 					NSFW = data[rando[lastrando]].NSFW;
 					console.log(SFWtoggle + "------Is SFW selected?");
 					console.log(NSFW + "-------Value of NSFW column");
-					if (NSFW.length == 0) {
+					if (NSFW.length == undefined) {
 						question += data[rando[lastrando]].Question + "<hr />";
 						console.log(question + "------Question after SFW check");
 						x++;
-						}
 					}
+				}
 				else {
 					question += data[rando[lastrando]].Question + "<hr />";
 					console.log(question + "-------Question WITHOUT SFW check");
 					x++;
-					}
-	
-	}
-		
-				
-	while (x < inputnumber);
-	//Print the question string
-	document.getElementById("questionoutput").innerHTML = question;	
-	
-  }
- 
-  function set1() {
-	inputnumber = 1;
-	console.log("***************** inputnumber is" + inputnumber);
-  }
-  
-  function set2() {
-	inputnumber = 2;
-	console.log("***************** inputnumber is" + inputnumber);
-  }
-  
-    function set3() {
-	inputnumber = 3;
-	console.log("***************** inputnumber is" + inputnumber);
-  }
-  
-    function set4() {
-	inputnumber = 4;
-	console.log("***************** inputnumber is" + inputnumber);
-  }
-  </script>
-  
-  
+				}
+
+			}
+
+
+			while (x < inputnumber);
+			//Print the question string
+			document.getElementById("questionoutput").innerHTML = question;
+
+		}
+
+		function set1() {
+			inputnumber = 1;
+			console.log("***************** inputnumber is" + inputnumber);
+		}
+
+		function set2() {
+			inputnumber = 2;
+			console.log("***************** inputnumber is" + inputnumber);
+		}
+
+		function set3() {
+			inputnumber = 3;
+			console.log("***************** inputnumber is" + inputnumber);
+		}
+
+		function set4() {
+			inputnumber = 4;
+			console.log("***************** inputnumber is" + inputnumber);
+		}
+		function printRandoEntry(lastrando, data, rando) {
+			console.log(data[rando[lastrando]]);
+		}
+	</script>
 
 
 
@@ -281,11 +299,14 @@
 
 
 
-    
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-  </body>
+
+
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+</body>
+
 </html>
